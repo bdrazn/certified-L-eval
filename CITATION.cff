@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: certified-L-eval — certified interval evaluation of L(1), L'(1), L''(1) for elliptic curves over Q
+message: >-
+  If you use this software, please cite it as below, and cite the
+  campaign documentation it ships with (docs/).
+authors:
+  - alias: bdrazn
+  - alias: Forge (agentic workspace)
+type: software
+version: v0.1.0
+date-released: 2026-11-10
+license: MIT
+repository-code: https://github.com/bdrazn/certified-L-eval
+keywords:
+  - elliptic curves
+  - L-functions
+  - BSD conjecture
+  - interval arithmetic
+  - ball arithmetic
+  - Arb
+  - certification
+  - number theory
+abstract: >-
+  Machine-checked balls for L(1), L'(1) and L''(1) of elliptic curves over Q,
+  built on a machine-verified pointwise involution law for the a_n stream and
+  python-flint (Arb) ball arithmetic, with derived error budgets, selftest
+  gates (Hecke + pointwise law + perturbation), and a cross-implementation
+  harness against fresh PARI/GP lfun references validated at the 100- and
+  500-digit rungs.

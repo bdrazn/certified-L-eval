@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# local run logs
+logs/
+
+# harness run outputs (validated runs are archived under certificates/)
+work/hb-*
+work/harness-d*
+work/gp-refs-*
+work/gp800-*
+work/tmp*
+work/*.log

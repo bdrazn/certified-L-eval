@@ -1,0 +1,27 @@
+default(threadsizemax, 1073741824);
+E = ellinit([0,1,1,-2,0]);
+N = ellglobalred(E)[1];
+w = ellrootno(E);
+print("389a1 ", N, " ", w);
+for(i = 1, 3600, print(ellak(E, i)));
+E = ellinit([0,0,1,-1,0]);
+N = ellglobalred(E)[1];
+w = ellrootno(E);
+print("37a1 ", N, " ", w);
+for(i = 1, 3600, print(ellak(E, i)));
+E = ellinit([1,-1,1,0,0]);
+N = ellglobalred(E)[1];
+w = ellrootno(E);
+print("53a1 ", N, " ", w);
+for(i = 1, 3600, print(ellak(E, i)));
+E = ellinit([0,-1,1,-2,2]);
+N = ellglobalred(E)[1];
+w = ellrootno(E);
+print("57b ", N, " ", w);
+for(i = 1, 3600, print(ellak(E, i)));
+E = ellinit([0,1,0,-1,0]);
+N = ellglobalred(E)[1];
+w = ellrootno(E);
+print("20a1 ", N, " ", w);
+for(i = 1, 3600, print(ellak(E, i)));
+quit
