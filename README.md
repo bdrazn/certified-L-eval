@@ -2,7 +2,7 @@
 
 Certified interval evaluation of **L(1), L′(1), L″(1)** for elliptic curves E/ℚ — machine-checked balls with derived error budgets, seconds per value at the 100-digit rung, harness-gated against fresh PARI/GP computation at the 100- and 500-digit rungs.
 
-Part of an open campaign to attack the Birch–Swinnerton-Dyer conjecture with machine-checkable certificates: [docs/01-survey-bsd-state-of-art.md](docs/01-survey-bsd-state-of-art.md) (state of the art) · [docs/02-attack-plan.md](docs/02-attack-plan.md) (plan) · [docs/m1-certified-evaluator.md](docs/m1-certified-evaluator.md) (this tool's design + full validation log).
+Part of an open campaign to attack the Birch–Swinnerton-Dyer conjecture with machine-checkable certificates: [docs/01-survey-bsd-state-of-art.md](docs/01-survey-bsd-state-of-art.md) (state of the art) · [docs/02-attack-plan.md](docs/02-attack-plan.md) (plan) · [docs/m1-certified-evaluator.md](docs/m1-certified-evaluator.md) (this tool's design + full validation log) · [docs/m2-detector-battery.md](docs/m2-detector-battery.md) (detector battery: full-loop audits + validation batch).
 
 ## What "certified" means here
 
@@ -42,6 +42,18 @@ Why the harness exists — four ways the tool's predecessor certified a wrong nu
 3. **Mid-normalization on zero-straddling balls** seeds garbage mids into widenings.
 4. **References must out-precision the ball.** At 500 digits the ball radii (±e−584) are *tighter* than PARI's own self-error at `\p 580` (~e−582) — containment then fails spuriously. Measured gp self-diff p580→p800: 5.6e−582. Rule pinned in the harness: refs at `\p digits+300`.
 
+## Detector battery (v0.2.0)
+
+`scripts/detector.py` turns the evaluator into a per-curve auditor. One command runs the full loop — Hecke-checked aₙ stream (v7 conductor-scaled sizing) → mwrank unconditional rank + regulator → PARI root number / Tamagawa / torsion / ellrank bounds → certified L^(k) balls (v7) → fresh out-precision `lfun` references → containment gate — and stamps every number's provenance (command, exit code, elapsed, sha256 of every file). Then three detectors demand agreement:
+
+- **D1** certified non-vanishing ⇒ ord ≤ k (k matched to the root number)
+- **D3** parity: proven rank parity vs root-number parity
+- **D2** implied-|Sha| square test (rank 2): certified interval for `|Sha| = L″(1)·T² / (2!·Ω·Reg·∏c_p)` must contain a perfect-square integer
+
+Seeded validation batch (reproducible: `--sample 10 --seed 20261110`; 389a1 pilot included): **11/11 CLEAN** — all containments pass, mwrank ranks agree with PARI bounds, regulator cross-checks at machine precision, and every implied-|Sha| window contains exactly [1]. The batch itself caught and fixed two real defects (v6's small-N-only selftest sizing; a D2 torsion-factor placement bug that fired the battery's first two alarms on torsion-2 curves — post-fix they read |Sha| = 1.000… to 38 digits). Full story: [docs/m2-detector-battery.md](docs/m2-detector-battery.md); artifacts in [certificates/m2/](certificates/m2/).
+
+Runtime: 2 s (N = 389) to ~55 s (N ≈ 500k) per full audit at d100.
+
 ## Quickstart
 
 ```bash
@@ -53,6 +65,12 @@ python3 scripts/lane_b_cert.py --N 389 --an work/an-389a1.txt --eps 1 --k 2 --di
 # the full gated harness, 100-digit rung
 python3 scripts/harness_agree.py --digits 100        # add --fresh to recompute all lanes
 python3 scripts/harness_agree.py --digits 500        # needs the 12,600-term streams (included)
+
+# the M2 detector battery: full per-curve audit (rank, parity, certified L, |Sha|)
+python3 scripts/detector.py --label 389.a1 --digits 100
+python3 scripts/detector.py --sample 10 --seed 20261110 --digits 100
+# needs also: eclib's mwrank at ~/.local/eclib/bin/mwrank; the LMFDB rank-2 export at
+# work/lmfdb-rank2-export.csv (details: docs/m2-detector-battery.md)
 ```
 
 `work/` ships the validated aₙ streams (12,600 Hecke-checked terms per curve, 389a1/37a1/20a1) and the certified constants cache. Harness outputs land in `work/hb-*.json` (gitignored); the shipped validated runs are archived under `certificates/`.
@@ -61,7 +79,7 @@ python3 scripts/harness_agree.py --digits 500        # needs the 12,600-term str
 
 - **Validated:** everything in the tables above, at two rungs, against two independent implementations, with corruption-tested gates.
 - **Not yet:** this tool reproduces constants the literature already holds — it is an instrument, not a result. The claim that "certified k ≤ 2 *value* balls at seconds per value, harness-gated, aimed at rank ≥ 2 curves" has no published counterpart *as far as our own sweep went* (see the prior-art section of [docs/m1-certified-evaluator.md](docs/m1-certified-evaluator.md)) — that sweep is ours, not referee-grade.
-- **Roadmap:** replicability/audit-trail pipeline and detector battery next; then the first Tier-1 verification tables over the LMFDB rank-2 family, conductors < 500,000 (exact counts, verified: **348,672 curves / 279,056 isogeny classes / 129,892 conductors** — sized at ~6.5 CPU-days sequential, i.e. under a day on this dev machine's 12 cores). No preprint before those tables exist.
+- **Roadmap:** audit-trail pipeline + detector battery **shipped (v0.2.0)**; next: a 100-curve bit-agreement bridge (Tier-0), then the first Tier-1 verification tables over the LMFDB rank-2 family, conductors < 500,000 (exact counts, verified: **348,672 curves / 279,056 isogeny classes / 129,892 conductors** — measured 2–55 s per full audit at d100 ⇒ a few CPU-days sequential, parallelizable). No preprint before those tables exist.
 
 ## Prior art & credits
 

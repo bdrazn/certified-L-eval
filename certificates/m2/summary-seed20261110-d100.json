@@ -1,0 +1,276 @@
+{
+  "date": "2026-11-11T23:03:24.941703+00:00",
+  "seed": 20261110,
+  "digits": 100,
+  "pilot": "389.a1 (M0/M1 calibration curve, re-run through the pipeline)",
+  "picks": [
+    "241725.a1",
+    "485982.c1",
+    "149600.n1",
+    "430100.m1",
+    "363328.g1",
+    "497406.j1",
+    "294229.c1",
+    "255990.z1",
+    "153990.l1",
+    "425358.b1"
+  ],
+  "results": [
+    {
+      "label": "389.a1",
+      "verdict": "CLEAN",
+      "alarms": [],
+      "certificates": [
+        {
+          "D1": "certified L^2(1) ball excludes 0 => ord <= 2"
+        },
+        {
+          "D2": "implied |Sha| contains square(s) [1] (SHA-CONSISTENT window)"
+        }
+      ],
+      "containment": true,
+      "rank_agreement": true,
+      "rank_mwrank": 2,
+      "rank_pari_bounds": [
+        2,
+        2
+      ],
+      "w": 1,
+      "elapsed_s": 2.0
+    },
+    {
+      "label": "241725.a1",
+      "verdict": "CLEAN",
+      "alarms": [],
+      "certificates": [
+        {
+          "D1": "certified L^2(1) ball excludes 0 => ord <= 2"
+        },
+        {
+          "D2": "implied |Sha| contains square(s) [1] (SHA-CONSISTENT window)"
+        }
+      ],
+      "containment": true,
+      "rank_agreement": true,
+      "rank_mwrank": 2,
+      "rank_pari_bounds": [
+        2,
+        2
+      ],
+      "w": 1,
+      "elapsed_s": 35.8
+    },
+    {
+      "label": "485982.c1",
+      "verdict": "CLEAN",
+      "alarms": [],
+      "certificates": [
+        {
+          "D1": "certified L^2(1) ball excludes 0 => ord <= 2"
+        },
+        {
+          "D2": "implied |Sha| contains square(s) [1] (SHA-CONSISTENT window)"
+        }
+      ],
+      "containment": true,
+      "rank_agreement": true,
+      "rank_mwrank": 2,
+      "rank_pari_bounds": [
+        2,
+        2
+      ],
+      "w": 1,
+      "elapsed_s": 55.6
+    },
+    {
+      "label": "149600.n1",
+      "verdict": "CLEAN",
+      "alarms": [],
+      "certificates": [
+        {
+          "D1": "certified L^2(1) ball excludes 0 => ord <= 2"
+        },
+        {
+          "D2": "implied |Sha| contains square(s) [1] (SHA-CONSISTENT window)"
+        }
+      ],
+      "containment": true,
+      "rank_agreement": true,
+      "rank_mwrank": 2,
+      "rank_pari_bounds": [
+        2,
+        2
+      ],
+      "w": 1,
+      "elapsed_s": 28.0
+    },
+    {
+      "label": "430100.m1",
+      "verdict": "CLEAN",
+      "alarms": [],
+      "certificates": [
+        {
+          "D1": "certified L^2(1) ball excludes 0 => ord <= 2"
+        },
+        {
+          "D2": "implied |Sha| contains square(s) [1] (SHA-CONSISTENT window)"
+        }
+      ],
+      "containment": true,
+      "rank_agreement": true,
+      "rank_mwrank": 2,
+      "rank_pari_bounds": [
+        2,
+        2
+      ],
+      "w": 1,
+      "elapsed_s": 50.6
+    },
+    {
+      "label": "363328.g1",
+      "verdict": "CLEAN",
+      "alarms": [],
+      "certificates": [
+        {
+          "D1": "certified L^2(1) ball excludes 0 => ord <= 2"
+        },
+        {
+          "D2": "implied |Sha| contains square(s) [1] (SHA-CONSISTENT window)"
+        }
+      ],
+      "containment": true,
+      "rank_agreement": true,
+      "rank_mwrank": 2,
+      "rank_pari_bounds": [
+        2,
+        2
+      ],
+      "w": 1,
+      "elapsed_s": 44.4
+    },
+    {
+      "label": "497406.j1",
+      "verdict": "CLEAN",
+      "alarms": [],
+      "certificates": [
+        {
+          "D1": "certified L^2(1) ball excludes 0 => ord <= 2"
+        },
+        {
+          "D2": "implied |Sha| contains square(s) [1] (SHA-CONSISTENT window)"
+        }
+      ],
+      "containment": true,
+      "rank_agreement": true,
+      "rank_mwrank": 2,
+      "rank_pari_bounds": [
+        2,
+        2
+      ],
+      "w": 1,
+      "elapsed_s": 50.8
+    },
+    {
+      "label": "294229.c1",
+      "verdict": "CLEAN",
+      "alarms": [],
+      "certificates": [
+        {
+          "D1": "certified L^2(1) ball excludes 0 => ord <= 2"
+        },
+        {
+          "D2": "implied |Sha| contains square(s) [1] (SHA-CONSISTENT window)"
+        }
+      ],
+      "containment": true,
+      "rank_agreement": true,
+      "rank_mwrank": 2,
+      "rank_pari_bounds": [
+        2,
+        2
+      ],
+      "w": 1,
+      "elapsed_s": 39.2
+    },
+    {
+      "label": "255990.z1",
+      "verdict": "CLEAN",
+      "alarms": [],
+      "certificates": [
+        {
+          "D1": "certified L^2(1) ball excludes 0 => ord <= 2"
+        },
+        {
+          "D2": "implied |Sha| contains square(s) [1] (SHA-CONSISTENT window)"
+        }
+      ],
+      "containment": true,
+      "rank_agreement": true,
+      "rank_mwrank": 2,
+      "rank_pari_bounds": [
+        2,
+        2
+      ],
+      "w": 1,
+      "elapsed_s": 38.0
+    },
+    {
+      "label": "153990.l1",
+      "verdict": "CLEAN",
+      "alarms": [],
+      "certificates": [
+        {
+          "D1": "certified L^2(1) ball excludes 0 => ord <= 2"
+        },
+        {
+          "D2": "implied |Sha| contains square(s) [1] (SHA-CONSISTENT window)"
+        }
+      ],
+      "containment": true,
+      "rank_agreement": true,
+      "rank_mwrank": 2,
+      "rank_pari_bounds": [
+        2,
+        2
+      ],
+      "w": 1,
+      "elapsed_s": 29.2
+    },
+    {
+      "label": "425358.b1",
+      "verdict": "CLEAN",
+      "alarms": [],
+      "certificates": [
+        {
+          "D1": "certified L^2(1) ball excludes 0 => ord <= 2"
+        },
+        {
+          "D2": "implied |Sha| contains square(s) [1] (SHA-CONSISTENT window)"
+        }
+      ],
+      "containment": true,
+      "rank_agreement": true,
+      "rank_mwrank": 2,
+      "rank_pari_bounds": [
+        2,
+        2
+      ],
+      "w": 1,
+      "elapsed_s": 47.8
+    }
+  ],
+  "summary_line": {
+    "total": 11,
+    "failed": 0,
+    "alarm_curves": 0
+  },
+  "note": "Regenerated after two defects were found and fixed by this very batch: (1) lane_b_cert v6->v7 size-scaling (adaptive law-selftest M; n_eval decay floor via max(); every M1-configuration certificate preserved byte-identical - 389a1 d100 mid_offset reproduced exactly). (2) D2 torsion factor placement corrected to |Sha| = L''*T^2/(2!*Omega_BSD*Reg*prod(c_p)); 485982.c1 and 153990.l1 (both torsion 2) had fired exact-1/16 false alarms pre-fix and read exactly 1.000 post-fix. All 11 reports under this summary are post-fix runs.",
+  "versions": {
+    "detector_sha256_16": [
+      "cfaafa13d67f1029"
+    ],
+    "lane_b_cert_sha256_16": [
+      "1ba065c71c3cb07c"
+    ]
+  }
+}

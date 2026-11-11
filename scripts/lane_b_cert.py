@@ -2,8 +2,16 @@
 # -*- coding: utf-8 -*-
 """
 lane_b_cert.py — Certified (rigorous) interval evaluator for L^{(k)}(E,1), k = 0..2,
-on strong Weil curves E/Q.  v2 ENGINE: python-flint ball arithmetic (Arb).
+on strong Weil curves E/Q.  v7 ENGINE: python-flint ball arithmetic (Arb).
 pip3 install python-flint  (0.6.0, verified 2026-11-10).
+
+v7 SIZE-SCALING FIXES (2026-11-11, M2 detector battery — first big-conductor run):
+  * n_eval: max() with a (digits+18)-digit decay floor  (was: min() that pinned
+    every conductor to the 8*(digits+18) branch — true series tail ~e-8 at big N).
+  * law-selftest M: adaptive ceil((dps+46)*ln10*sqrt(N)/pi)+64  (was: fixed 3,000,
+    converges only for N <~ 1,700).
+  Every M1-configuration certificate is preserved exactly (n_eval 944 at d100,
+  4144 at d500; law-gate outcomes unchanged).
 
 CORE IDENTITY (derived + machine-verified 2026-11-10; logs/probe2-4.log):
    G(u) = sum_n a_n exp(-2 pi n u / sqrt(N))
@@ -319,8 +327,15 @@ from math import comb as _comb
 
 def evaluate(N, ak, eps, kmax, digits, ctx):
     lam1 = lam_n(1, N)
-    n_eval = int(min(8.0 * (digits + 18), 120.0 / float(lam1.mid()) +
-                     8.0 * (digits + 18)))
+    # v7 size-scaling fix (2026-11-11, M2 detector battery): n_eval must grow with
+    # sqrt(N) — the old min() pinned every conductor to the 8*(digits+18) branch,
+    # leaving a true series tail of ~e-8 scale at N ~ 250k-500k (useless balls).
+    # New form: max(8*(digits+18), (digits+18)-digit decay floor at sqrt(N)/2pi).
+    # Every M1-configuration n_eval is preserved exactly: 389/d100->944, 20/d100->944,
+    # 37/d100->944, 37/d500->4144, 389/d500->4144 (the floor branch never binds there).
+    n_eval = int(max(8.0 * (digits + 18),
+                     math.ceil((digits + 18) * math.log(10.0) * math.sqrt(N)
+                               / (2.0 * math.pi))))
     n_eval = min(n_eval, len(ak) - 1)
     results = {}
     lam_max = float(lam1.mid()) * n_eval
@@ -348,7 +363,19 @@ def evaluate(N, ak, eps, kmax, digits, ctx):
 def selftest_pointwise_law(N, ak, eps, dps):
     setbits(b2(dps))
     sqN = arb(N).sqrt()
-    def G(u, M=3000):
+    # v7 size-scaling fix (2026-11-11, M2): the old fixed M=3000 only converges
+    # for conductors N <~ 1,700 (decay at u=0.5 is e^{-pi*n/sqrt(N)}, so 3,000
+    # terms leave ~e-8 total decay at N ~ 250k) — the gate was failing on its
+    # own truncation, not on the stream.  M now scales so the direct-series
+    # tail (both sides evaluated directly — required so a corrupted stream
+    # cannot pass) is below the tolerance with margin.  For every M0/M1
+    # configuration the new M is smaller but still gives >e-180 decay where
+    # the old 3,000 gave >=e-207, so all past gate outcomes are unchanged.
+    sqN_hi = float(sqN.mid()) + float(sqN.rad())
+    M_law = int(math.ceil((dps + 46) * math.log(10.0) * sqN_hi / math.pi)) + 64
+    def G(u, M=None):
+        if M is None:
+            M = M_law
         s = arb(0)
         for n in range(1, M + 1):
             s += arb(fmpz(ak[n - 1])) * arb.exp(-2 * arb.pi() * n * u / sqN)

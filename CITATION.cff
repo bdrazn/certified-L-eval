@@ -7,8 +7,8 @@ authors:
   - alias: bdrazn
   - alias: Forge (agentic workspace)
 type: software
-version: v0.1.0
-date-released: 2026-11-10
+version: v0.2.0
+date-released: 2026-11-11
 license: MIT
 repository-code: https://github.com/bdrazn/certified-L-eval
 keywords:
@@ -26,4 +26,6 @@ abstract: >-
   python-flint (Arb) ball arithmetic, with derived error budgets, selftest
   gates (Hecke + pointwise law + perturbation), and a cross-implementation
   harness against fresh PARI/GP lfun references validated at the 100- and
-  500-digit rungs.
+  500-digit rungs, extended in v0.2.0 with a detector-battery pipeline for full
+  per-curve BSD audits (rank, parity, certified |Sha|-implied square test) with
+  complete provenance.
