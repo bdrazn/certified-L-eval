@@ -1,0 +1,121 @@
+{
+ "status": "paused (machine offline; fully resumable)",
+ "paused_utc": "2026-11-12T01:17:23.522484Z",
+ "launched_utc": "2026-11-12T00:57Z",
+ "digits": 100,
+ "workers": 8,
+ "family_curves": 348672,
+ "queue": "work/tier1/queue.jsonl: dedup of the LMFDB rank-2 export, sorted by (conductor, label) ascending, so any stopping point completes conductor tiers",
+ "rows_parked": 1062,
+ "ok": 1062,
+ "alarms": 0,
+ "fails": 0,
+ "idx_range": [
+  0,
+  1063
+ ],
+ "idx_contiguous": false,
+ "conductor_frontier": {
+  "N_max_done": 6354,
+  "N_min_done": 389
+ },
+ "per_shard_frontier": [
+  {
+   "shard": 0,
+   "done": 133,
+   "frontier_N": 6336,
+   "ok": 111,
+   "alarms": 0,
+   "fails": 0,
+   "ts": "2026-11-12T01:16:58.036755Z"
+  },
+  {
+   "shard": 1,
+   "done": 133,
+   "frontier_N": 6336,
+   "ok": 111,
+   "alarms": 0,
+   "fails": 0,
+   "ts": "2026-11-12T01:16:55.364051Z"
+  },
+  {
+   "shard": 2,
+   "done": 133,
+   "frontier_N": 6336,
+   "ok": 111,
+   "alarms": 0,
+   "fails": 0,
+   "ts": "2026-11-12T01:16:57.007292Z"
+  },
+  {
+   "shard": 3,
+   "done": 133,
+   "frontier_N": 6336,
+   "ok": 111,
+   "alarms": 0,
+   "fails": 0,
+   "ts": "2026-11-12T01:16:58.548006Z"
+  },
+  {
+   "shard": 4,
+   "done": 133,
+   "frontier_N": 6346,
+   "ok": 111,
+   "alarms": 0,
+   "fails": 0,
+   "ts": "2026-11-12T01:16:58.619907Z"
+  },
+  {
+   "shard": 5,
+   "done": 132,
+   "frontier_N": 6336,
+   "ok": 111,
+   "alarms": 0,
+   "fails": 0,
+   "ts": "2026-11-12T01:16:56.408305Z"
+  },
+  {
+   "shard": 6,
+   "done": 132,
+   "frontier_N": 6336,
+   "ok": 111,
+   "alarms": 0,
+   "fails": 0,
+   "ts": "2026-11-12T01:16:56.182161Z"
+  },
+  {
+   "shard": 7,
+   "done": 133,
+   "frontier_N": 6354,
+   "ok": 112,
+   "alarms": 0,
+   "fails": 0,
+   "ts": "2026-11-12T01:16:59.057686Z"
+  }
+ ],
+ "shard_sentinels_done": [
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false
+ ],
+ "provenance_shas16": {
+  "detector.py": "273b269098c2de98",
+  "lane_b_cert.py": "1ba065c71c3cb07c",
+  "tier1_scan.py": "52978de0584793cc",
+  "detach.py": "2d1f03beff604e64",
+  "bridge_tier0.py": "ad4d130ccf06849f"
+ },
+ "cost_model": "Tier-0 bridge mean 39.41 s/curve => 13.74M CPU-s = 159 CPU-days sequential for the full family at d100",
+ "resume_command": "DETACH_LOG=work/tier1-supervisor.log python3 scripts/detach.py python3 scripts/tier1_scan.py --supervise --workers 8   (from the workspace root)",
+ "resume_semantics": "each worker rereads its rows-shardNN.jsonl done-set and continues from its frontier; committed rows are never recomputed; the supervisor auto-restarts dead shards; --progress reports; --stop halts cleanly",
+ "notes": [
+  "counts above are taken from the rows files (source of truth), not the frontier per-life counters",
+  "zero alarms and zero fails across all parked rows",
+  "full reports preserved under work/tier1/ for alarms, failures, and every-1000th curve (subsample)"
+ ]
+}
