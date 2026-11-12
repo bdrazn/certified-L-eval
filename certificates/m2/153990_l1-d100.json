@@ -10,19 +10,19 @@
  "conductor": 153990,
  "rank_lmfdb": 2,
  "digits": 100,
- "started_utc": "2026-11-11T22:59:57.328297+00:00",
+ "started_utc": "2026-11-11T23:39:23.753959+00:00",
  "versions": {
   "gp": "unknown",
   "flint": "0.6.0",
   "mwrank_sha256_16": "94a5a4f74fa433bd",
   "lane_b_cert_sha256_16": "1ba065c71c3cb07c",
-  "detector_sha256_16": "cfaafa13d67f1029",
+  "detector_sha256_16": "273b269098c2de98",
   "gp_ref": {
    "tag": "gp-version",
    "cmd": "gp --version",
    "input_sha256": "e3b0c44298fc1c14",
    "exit": 0,
-   "elapsed_s": 0.006,
+   "elapsed_s": 0.007,
    "stdout_tail": "",
    "stderr_tail": "                  GP/PARI CALCULATOR Version 2.19.0 (released)\n         arm64 running darwin (aarch64/GMP-6.3.0 kernel) 64-bit version\n     compiled: Sep 28 2026, Apple clang version 21.0.0 (clang-2100.3.34.2)\n                           threading engine: pthread\n                (readline v8.3 disabled, extended help enabled)\n"
   },
@@ -31,7 +31,7 @@
    "cmd": "/Library/Developer/CommandLineTools/usr/bin/python3 -c import flint; print(flint.__version__)",
    "input_sha256": "e3b0c44298fc1c14",
    "exit": 0,
-   "elapsed_s": 0.041,
+   "elapsed_s": 0.043,
    "stdout_tail": "0.6.0\n",
    "stderr_tail": ""
   }
@@ -57,9 +57,9 @@
    "cmd": "/Users/forge/.local/eclib/bin/mwrank",
    "input_sha256": "b68c3ea9f94ecbe3",
    "exit": 0,
-   "elapsed_s": 0.136,
+   "elapsed_s": 0.138,
    "stdout_tail": "---------------\nFirst stage (no second descent yet)...\n(-1,0,1812,0,-815616):  (x:y:z) = (30:72:1)\n\tCurve E' \tPoint [-900:-2160:1], height = 2.8532230460348\n\tCurve E \tPoint [180:234:125], height = 5.7064460920696\n(6,0,1812,0,135936):  (x:y:z) = (4:408:1)\n\tCurve E' \tPoint [96:9792:1], height = 2.6892335839959\n\tCurve E \tPoint [2601:-107100:1], height = 5.3784671679919\nAfter first global descent, this component of the rank = 3\n\n-------------------------------------------------------\nSummary of results:\n-------------------------------------------------------\n\trank(E) = 2\n\t#E(Q)/2E(Q) = 8\n\nInformation on III(E/Q):\n\t#III(E/Q)[phi']    = 1\n\t#III(E/Q)[2]       = 1\n\nInformation on III(E'/Q):\n\t#phi'(III(E/Q)[2]) = 1\n\t#III(E'/Q)[phi]    = 1\n\t#III(E'/Q)[2]      = 1\n\n-------------------------------------------------------\n\nList of points on E = [1,-1,0,-17019,-850325]:\n\nI.  Points on E mod phi(E')\n--none (modulo torsion).\n\n\nII. Points on phi(E') mod 2E\nPoint [-74890:37679:1000], height = 5.7064460920696\nPoint [575:-13675:1], height = 5.3784671679919\n-------------------------------------------------------\nComputing full set of 4 coset representatives for\n2E(Q) in E(Q) (modulo torsion), and sorting into height order....done.\n\n\nUsed descent via 2-isogeny with isogenous curve E' = [1,-1,0,-1089,-12407]\nRank = 2\nRank of S^2(E)  = 3\nRank of S^2(E') = 3\nRank of S^phi(E') = 1\nRank of S^phi'(E) = 3\n\nSearching for points (bound = 8)...done:\n  found points which generate a subgroup of rank 2\n  and regulator 10.957097120878\nProcessing points found during 2-descent...done:\n  now regulator = 10.957097120878\nSaturating (with bound = 1000)...done:\n  points were already saturated.\nTransferring points from minimal curve [1,-1,0,-17019,-850325] back to original curve [1,-1,0,-17019,-850325]\n\nGenerator 1 is [-75:40:1]; height 2.2001317025364\nGenerator 2 is [575:13100:1]; height 5.3784671679919\n\nRegulator = 10.957097120878\n\nThe rank and full Mordell-Weil basis have been determined unconditionally.\n\n",
-   "stderr_tail": "ts that generate E(Q) modulo 2E(Q).\nand finally saturate to obtain generating points on the curve.\nFor more details see the mwrank documentation.\nFor details of algorithms see the author's book.\n\nPlease acknowledge use of this program in published work, \nand send problems to john.cremona@gmail.com.\n\neclib version 20261102, using NTL ZZs and NTL real and complex multiprecision floating point\nUsing multiprecision floating point with 50 bits precision.\nEnter curve:  (0.115029 seconds)\nEnter curve: "
+   "stderr_tail": "ts that generate E(Q) modulo 2E(Q).\nand finally saturate to obtain generating points on the curve.\nFor more details see the mwrank documentation.\nFor details of algorithms see the author's book.\n\nPlease acknowledge use of this program in published work, \nand send problems to john.cremona@gmail.com.\n\neclib version 20261102, using NTL ZZs and NTL real and complex multiprecision floating point\nUsing multiprecision floating point with 50 bits precision.\nEnter curve:  (0.116294 seconds)\nEnter curve: "
   },
   "rank": 2,
   "unconditional": true,
@@ -125,7 +125,7 @@
    "cmd": "/Library/Developer/CommandLineTools/usr/bin/python3 /Users/forge/Desktop/scatch/solvemaths1mill/scripts/lane_b_cert.py --N 153990 --an /Users/forge/Desktop/scatch/solvemaths1mill/work/an-det-153990_l1.txt --eps 1 --k 2 --digits 100 --json-out /Users/forge/Desktop/scatch/solvemaths1mill/work/det-hb-153990_l1-d100.json",
    "input_sha256": "e3b0c44298fc1c14",
    "exit": 0,
-   "elapsed_s": 28.889,
+   "elapsed_s": 28.745,
    "stdout_tail": "111593840563626977893160168904536149762426683696474326769476753545151369767910083762428360576e-118 +/- 2.82e-701], [6.59359056133613790584393478395466395251814707333783386365277223197322759127879078485707191836124041295925093603651239504392491277905413208993613797527975433745510108033912561652233414873009210587666501767377142986356350710210544593842437226368570490630248592878125892200808778238241242623079544764320775113631951013705129198625575801304089542612624863756241457699901294849172747548220768406451520171415500748224823832134472129837876439621791522521342491943362993589074761259073625213322083888406159436373022106839831095463850237573316303525673230523246454848630232089916237571639424e-118 +/- 2.82e-701]]  (n_eval=16970, prec_bits=1857)\n# L^2(1) in [[18.3197950499629856444837540327830977689255482124493472492611853738292460739044506706226051370709822496948066142406445046778354755729748532775090764993654913330615603291374400671897672124429614148344282509043683416889503671490986975395115945033306569137389073500301349236240048240381031793709741303346239997468130366971740799277241945946662286770571807947816842459309406739100987715159509718542007785324786883835684434664028511892346442482010572139486400072583636061760902586302431225849897279773733479081707271101646531673116936095415009148787356506100653922273720045737835752206580 +/- 1.68e-581], [18.3197950499629856444837540327830977689255482124493472492611853738292460739044506706226051370709822496948066142407263021441815621222187270750454381577210586764763388991047047028293444408738288654127310632434320269877782455435602535091596993305329240862078295013631630780553164559735481052484030019293399432856385372593053062777284478101854285032402186731129844061898949310409799317807857334737686496262286883835684434664028511892346442482010572139486400072583636061760902586302431225849897279773733479081707271101646531673116936095415009148787356506100653922273720045737835752206580 +/- 1.68e-581]]  (n_eval=16970, prec_bits=1857)\n",
    "stderr_tail": "# (P) pointwise law verified on a_n stream\n"
   },
@@ -135,16 +135,16 @@
   "prec_bits": 1857,
   "balls": {
    "0": [
-    "-1.85357508742518e-118",
-    "1.90910149284021e-118"
+    "-1.853575087425180271895891475669552548551864413196199826840493872892152275975102174229695932164726929924883025619095878245317573772867388081109836485696254548012e-118",
+    "1.909101492840212406831259100157909030817270781203466138919846490693442375781110577549933908391157445398350331362716167534135224165972218017444895884294502660817e-118"
    ],
    "1": [
-    "-6.79111068655182e-118",
-    "6.59359056133614e-118"
+    "-6.791110686551822454369599893568732261631850602536465760532776816213629252389234931264523084065086404928221190265434795659825845924854099015429846730633646868431e-118",
+    "6.593590561336137905843934783954663952518147073337833863652772231973227591278790784857071918361240412959250936036512395043924912779054132089936137975279754337455e-118"
    ],
    "2": [
-    "18.319795049963",
-    "18.319795049963"
+    "18.31979504996298564448375403278309776892554821244934724926118537382924607390445067062260513707098224969480661424064450467783547557297485327750907649936549133306",
+    "18.31979504996298564448375403278309776892554821244934724926118537382924607390445067062260513707098224969480661424072630214418156212221872707504543815772105867648"
    ]
   }
  },
@@ -154,7 +154,7 @@
    "cmd": "gp -q -f /tmp/det-ref-153990_l1.gp",
    "input_sha256": "e3b0c44298fc1c14",
    "exit": 0,
-   "elapsed_s": 0.069,
+   "elapsed_s": 0.067,
    "stdout_tail": "   realprecision = 404 significant digits (400 digits displayed)\nREF-L = 18.31979504996298564448375403278309776892554821244934724926118537382924607390445067062260513707098224969480661424068538993765960106857884393551979109660663672043300689436793137659047458105461262075808229774874761669265615614990716510518586138473161578674177760631755314923900172109013871190663751192014183801843028487218193562488755122458296202584899121903870213846676722717393993802114572108726584869\nREF-DONE\n",
    "stderr_tail": "  ***   Warning: new maximum stack size = 4000006144 (3814.703 Mbytes).\n"
   },
@@ -210,6 +210,6 @@
    "D2": "implied |Sha| contains square(s) [1] (SHA-CONSISTENT window)"
   }
  ],
- "elapsed_s": 29.2,
- "finished_utc": "2026-11-11T23:00:26.495491+00:00"
+ "elapsed_s": 29.0,
+ "finished_utc": "2026-11-11T23:39:52.776050+00:00"
 }

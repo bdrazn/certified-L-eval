@@ -49,10 +49,22 @@ Runtime: 2.0 s (N = 389) to ~55 s (N ≈ 500k) per full audit at d100.
 
 ## Artifacts
 
-- [certificates/m2/](../certificates/m2/) — 11 per-curve reports + `summary-seed20261110-d100.json` (regenerated post-fix; uniform provenance: detector sha `cfaafa13d67f1029`, lane_b_cert sha `1ba065c71c3cb07c`)
+- [certificates/m2/](../certificates/m2/) — 11 per-curve reports + `summary-seed20261110-d100.json` (regenerated after the final fix; uniform provenance: detector sha `273b269098c2de98`, lane_b_cert sha `1ba065c71c3cb07c`)
+- [certificates/m2/bridge-tier0-seed20261110-d100.json](../certificates/m2/bridge-tier0-seed20261110-d100.json) — Tier-0 bridge certificate (detector sha `273b269098c2de98`, driver sha `ad4d130ccf06849f`; n_ok 100, n_fail 0, every check 100.0%)
 - The LMFDB rank-2 export (348,672 curves, conductors < 500,000; downloaded from lmfdb.org 2026-11-10) goes into `work/lmfdb-rank2-export.csv`; `mwrank` from an eclib build is expected at `~/.local/eclib/bin/mwrank`
+
+## Tier-0 bridge result (seed 20261110, d100, run 2026-11-11 → 12) — PASSED
+
+The last M2 gate: a seeded random sample of 100 curves from the LMFDB rank-2 family (conductors < 500,000), each run through the full audit pipeline at 100 digits under one detector build (sha `273b269098c2de98`).
+
+- **100/100 OK, zero alarms.** Every rank proven unconditionally (mwrank 2-descent) and equal to LMFDB's rank 2; torsion, CM flag and root-number parity all agree (`checks_pct` all 100.0 in the certificate).
+- **Containment 100/100** — every implied |Sha| ball contains the square [1]; max relative containment radius `0.0` and max relative regulator cross-check deviation `0.0` as recorded.
+- **Timing:** mean 39.41 s/curve (median 39.41, min 8.69, max 173.41), 3941 s sequential.
+- **Determinism:** three fresh in-assembly reruns are bit-equal to their batch runs on every computed leaf — the only differing leaf is mwrank's stderr banner tail (an I/O echo, not a computed value). All ten shipped M2 anchor certificates re-produce bit-equal computed leaves against fresh runs of the same curves; the only differing leaves are the version stamp (anchors pre-date the serialization fix) and, on some, that same stderr tail. The ball-serialization fix is validated end-to-end: fresh full-precision balls agree numerically with the shipped truncated balls under the numeric ball comparison.
+
+Certificate: [certificates/m2/bridge-tier0-seed20261110-d100.json](../certificates/m2/bridge-tier0-seed20261110-d100.json).
 
 ## Next
 
-- **Tier-0:** a 100-curve bit-agreement bridge (certified balls vs independent high-precision references, batched per-curve) — last gate before scale.
+- **Tier-0:** ~~a 100-curve bit-agreement bridge — last gate before scale~~ **passed 2026-11-12: 100/100, zero alarms** (results above).
 - **M3 (Tier-1):** the first verification tables over the full LMFDB rank-2 family: 348,672 curves / 279,056 isogeny classes / 129,892 conductors — measured ~2–55 s/audit at d100 ⇒ a few CPU-days sequential, parallelizable.

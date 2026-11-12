@@ -460,7 +460,16 @@ def run_curve(row, digits, versions_info):
     k = 2 if w == 1 else 1
     st_e = laneb_stage(tag, N, st_b["path"], w, k, digits)
     rpt["laneb"] = {kk: v for kk, v in st_e.items() if kk != "balls_raw"}
-    rpt["laneb"]["balls"] = {str(kk): [str(lo), str(hi)] for kk, prs in st_e["balls_raw"].items() for lo, hi in [tuple(map(str, ball_union(prs)))]}
+    # Ball display: union computed and printed at explicit precision. The ambient
+    # mp.dps must never leak into reports — process-history-dependent printing is
+    # a nondeterminism the Tier-0 bridge exposed (2026-11-11): fresh single-curve
+    # processes printed 15 chars, in-process multi-curve runs printed hundreds.
+    _disp = {}
+    with mp.workdps(digits + 160):
+        for kk, prs in st_e["balls_raw"].items():
+            lo, hi = ball_union(prs)
+            _disp[str(kk)] = [mp.nstr(lo, digits + 60), mp.nstr(hi, digits + 60)]
+    rpt["laneb"]["balls"] = _disp
 
     # stage F
     st_f = gp_ref_stage(tag, row["coeffs"], digits, k)

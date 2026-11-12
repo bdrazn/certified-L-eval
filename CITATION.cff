@@ -7,8 +7,8 @@ authors:
   - alias: bdrazn
   - alias: Forge (agentic workspace)
 type: software
-version: v0.2.0
-date-released: 2026-11-11
+version: v0.2.1
+date-released: 2026-11-12
 license: MIT
 repository-code: https://github.com/bdrazn/certified-L-eval
 keywords:
@@ -28,4 +28,6 @@ abstract: >-
   harness against fresh PARI/GP lfun references validated at the 100- and
   500-digit rungs, extended in v0.2.0 with a detector-battery pipeline for full
   per-curve BSD audits (rank, parity, certified |Sha|-implied square test) with
-  complete provenance.
+  complete provenance, and in v0.2.1 validated further by a Tier-0 bridge: 100
+  seeded random rank-2 curves audited end-to-end with 100/100 agreement and
+  zero alarms.

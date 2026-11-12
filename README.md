@@ -79,7 +79,7 @@ python3 scripts/detector.py --sample 10 --seed 20261110 --digits 100
 
 - **Validated:** everything in the tables above, at two rungs, against two independent implementations, with corruption-tested gates.
 - **Not yet:** this tool reproduces constants the literature already holds — it is an instrument, not a result. The claim that "certified k ≤ 2 *value* balls at seconds per value, harness-gated, aimed at rank ≥ 2 curves" has no published counterpart *as far as our own sweep went* (see the prior-art section of [docs/m1-certified-evaluator.md](docs/m1-certified-evaluator.md)) — that sweep is ours, not referee-grade.
-- **Roadmap:** audit-trail pipeline + detector battery **shipped (v0.2.0)**; next: a 100-curve bit-agreement bridge (Tier-0), then the first Tier-1 verification tables over the LMFDB rank-2 family, conductors < 500,000 (exact counts, verified: **348,672 curves / 279,056 isogeny classes / 129,892 conductors** — measured 2–55 s per full audit at d100 ⇒ a few CPU-days sequential, parallelizable). No preprint before those tables exist.
+- **Roadmap:** audit-trail pipeline + detector battery **shipped (v0.2.0)**; Tier-0 bit-agreement bridge **passed 100/100, zero alarms** (seeded random rank-2 sample at d100, mean 39.4 s/curve — [certificate](certificates/m2/bridge-tier0-seed20261110-d100.json)). Next: the first Tier-1 verification tables over the LMFDB rank-2 family, conductors < 500,000 (exact counts, verified: **348,672 curves / 279,056 isogeny classes / 129,892 conductors** — measured 2–55 s per full audit at d100 ⇒ a few CPU-days sequential, parallelizable). No preprint before those tables exist.
 
 ## Prior art & credits
 

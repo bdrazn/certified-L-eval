@@ -10,19 +10,19 @@
  "conductor": 149600,
  "rank_lmfdb": 2,
  "digits": 100,
- "started_utc": "2026-11-11T22:55:32.901372+00:00",
+ "started_utc": "2026-11-11T23:35:01.594248+00:00",
  "versions": {
   "gp": "unknown",
   "flint": "0.6.0",
   "mwrank_sha256_16": "94a5a4f74fa433bd",
   "lane_b_cert_sha256_16": "1ba065c71c3cb07c",
-  "detector_sha256_16": "cfaafa13d67f1029",
+  "detector_sha256_16": "273b269098c2de98",
   "gp_ref": {
    "tag": "gp-version",
    "cmd": "gp --version",
    "input_sha256": "e3b0c44298fc1c14",
    "exit": 0,
-   "elapsed_s": 0.013,
+   "elapsed_s": 0.007,
    "stdout_tail": "",
    "stderr_tail": "                  GP/PARI CALCULATOR Version 2.19.0 (released)\n         arm64 running darwin (aarch64/GMP-6.3.0 kernel) 64-bit version\n     compiled: Sep 28 2026, Apple clang version 21.0.0 (clang-2100.3.34.2)\n                           threading engine: pthread\n                (readline v8.3 disabled, extended help enabled)\n"
   },
@@ -31,7 +31,7 @@
    "cmd": "/Library/Developer/CommandLineTools/usr/bin/python3 -c import flint; print(flint.__version__)",
    "input_sha256": "e3b0c44298fc1c14",
    "exit": 0,
-   "elapsed_s": 0.049,
+   "elapsed_s": 0.042,
    "stdout_tail": "0.6.0\n",
    "stderr_tail": ""
   }
@@ -42,7 +42,7 @@
    "cmd": "gp -q -f /tmp/det-extract-149600_n1.gp",
    "input_sha256": "e3b0c44298fc1c14",
    "exit": 0,
-   "elapsed_s": 0.046,
+   "elapsed_s": 0.043,
    "stdout_tail": "66\n0\n0\n0\n72\n0\n-92\n0\n0\n0\n64\n0\n-252\n0\n-34\n0\n-52\n0\n0\n0\n-158\n0\n-192\n0\n-1\n0\n-288\n0\n0\n0\n576\n0\n-144\n0\n-297\n0\n-124\n0\n0\n0\n60\n0\n94\n0\n-245\n0\n374\n0\n0\n0\n-76\n0\n144\n0\n424\n0\n416\n0\n0\n0\n-40\n0\n28\n0\n64\n0\n92\n0\n0\n0\n-396\n0\n20\n0\n-86\n0\n-22\n0\n0\n0\n14\n0\n-13\n0\n108\n0\n-321\n0\n0\n0\n-320\n0\n-440\n0\n24\n0\n160\n0\n0\n0\n-148\n0\n268\n0\n293\n0\n-336\n0\n0\n0\n-162\n0\n-360\n0\n-336\n0\n-8\n0\n0\n0\n-612\n0\n-145\n0\n394\n0\n344\n0\n0\n0\n252\n0\n99\n0\n76\n0\n-36\n0\n0\n0\n-220\n0\n-317\n0\n240\n0\n-180\n0\n0\n0\n-8\n0\n64\n0\n-81\n0\n504\n0\n0\n0\n108\n0\n-96\n0\n-120\n0\n-50\n0\n0\n0\n-304\n0\n-188\n0\n296\n0\n-69\n0\n0\n0\n-8\n0\n30\n0\n86\n0\n138\n0\n0\n0\n-243\n0\n-186\n0\n28\n0\n88\n0\n0\n0\n30\n0\n171\n0\n13\n0\n120\n0\n0\n0\n60\n0\n-320\n0\n-474\n0\n-96\n0\n0\n0\n120\n0\n176\n0\n178\n0\n-111\n0\n0\n0\n-150\n0\n-32\n0\n-240\n0\n222\n0\n0\n0\n-78\n0\n-320\n0\n-384\n0\n-174\n0\n0\n0\n212\n0\n24\n0\n258\n0\n306\n0\n0\n0\n169\n0\n-156\n0\n-486\n0\n384\n0\n0\n0\n10\n0\n48\n0\n178\n0\n-22\n0\n0\n0\n-259\n0\n348\n0\n225\n0\n-29\n0\n0\n0\n9\n0\n210\n0\n-8\n0\n-510\n0\n0\n0\n-272\n0\n360\n0\n109\n0\n-432\n0\n0\n0\n-190\n0\n64\n0\n21\n0\n-356\n0\n0\n0\n-44\n0\n48\n0\n-576\n0\n-162\n0\n0\n0\n68\n0\n-282\n0\n-150\n0\n-68\n0\n0\n0\n182\n0\n332\n0\n-360\n0\n-80\n0\n0\n0\n-648\n0\n-268\n0\n-36\n0\n168\n0\n0\n0\n48\n0\n-282\n0\n263\n0\n198\n0\n0\n0\n-60\n0\n-432\n0\n-56\n0\n-68\n0\n0\n0\n29\n0\n351\n0\n-312\n0\n-42\n0\n0\n0\n-168\n0\n-64\n0\n46\n0\n204\n0\n0\n0\n64\n0\n9\n0\n-164\n0\n107\n0\n0\n0\n-144\n0\n87\n0\n112\n0\n52\n0\n0\n0\n60\n0\n-60\n0\n30\n0\n62\n0\n0\n0\n-48\n0\n352\n0\n0\n0\n-192\n0\n0\n0\n-252\n0\n483\n0\n90\n0\n-107\n0\n0\n0\n-126\n0\n-18\n0\n20\n0\n7\n0\n0\n0\n95\n0\n90\n0\n86\n0\n80\n0\n0\n0\n-285\n0\n54\n0\n114\n0\n-282\n0\n0\n0\n-292\n0\n360\n0\n-216\n0\n-24\n0\n0\n0\n16\n0\n252\n0\n60\n0\n232\n0\n0\n0\n156\n0\n0\n0\n598\n0\n72\n0\n0\n0\n22\n0\n-6\n0\n-37\n0\n368\n0\n0\n0\n-202\n0\n224\n0\n-12\n0\n192\n0\n0\n0\n-315\n0\n-81\n0\n36\n0\n-267\n0\n0\n0\n384\n0\n-28\n0\n-504\n0\n-28\n0\n0\n0\n396\n0\n-252\n0\n-106\n0\n44\n0\n0\n0\n168\n0\n6\n0\n80\n0\n196\n0\n0\n0\n-166\n0\n-506\n0\n-288\n0\n96\n0\n0\n0\n-251\n0\n20\n0\n116\n0\n-362\n0\n0\n0\n-89\n0\n6\n0\n-128\n0\n-114\n0\n0\n0\n-60\n0\n-83\n0\n-438\n0\n308\n0\n0\n0\n-16\n0\n72\n0\n208\n0\n256\n0\n0\n0\n102\n0\n-64\n0\n306\n0\n78\n0\n0\n0\n-72\n0\n22\n0\n-79\n0\n-122\n0\n0\n0\n66\n0\n308\n0\n110\n0\n-91\n0\n0\n0\n-210\n0\n-184\n0\n32\n0\n360\n0\n0\n0\n-42\n0\n-258\n0\n80\n0\n-108\n0\n0\n0\n-400\n0\n75\n0\n384\n0\n390\n0\n0\n0\n-90\n0\n-46\n0\n-96\n0\n-427\n0\n0\n0\n76\n0\n56\n0\n81\n0\n58\n0\n0\n0\n-360\n0\n352\n0\n228\n0\n110\n0\nAN-EXTRACT-DONE\n",
    "stderr_tail": "  ***   Warning: new maximum stack size = 4000006144 (3814.703 Mbytes).\n  ***   at top-level: ...f(abs(v[i])>2*sqrtint(i),error(\"HECKE-BOUND-FA\n  ***                                             ^---------------------\n  ***   user error: HECKE-BOUND-FAIL 247\n... skipping file '/tmp/det-extract-149600_n1.gp'\n"
   },
@@ -57,9 +57,9 @@
    "cmd": "/Users/forge/.local/eclib/bin/mwrank",
    "input_sha256": "bf096ec2ee4cc455",
    "exit": 0,
-   "elapsed_s": 0.14,
+   "elapsed_s": 0.147,
    "stdout_tail": "Curve [0,1,0,-2333,49963] :\tBasic pair: I=7000, J=-1370000\ndisc=-504900000000\n2-adic index bound = 2\nBy Lemma 5.1(a), 2-adic index = 1\n2-adic index = 1\nOne (I,J) pair\nLooking for quartics with I = 7000, J = -1370000\nLooking for Type 3 quartics:\nTrying positive a from 1 up to 31 (square a first...)\n(1,0,-74,236,127)\t--nontrivial...(x:y:z) = (1 : 1 : 0)\nPoint = [49:236:1]\n\theight = 2.9949804505417\nRank of B=im(eps) increases to 1\n(1,0,-50,100,375)\t--nontrivial...(x:y:z) = (1 : 1 : 0)\nPoint = [33:100:1]\n\theight = 0.55117558460006\nRank of B=im(eps) increases to 2\n(1,2,64,338,411)\t--trivial\nTrying positive a from 1 up to 31 (...then non-square a)\nTrying negative a from -1 down to -6\nFinished looking for Type 3 quartics.\nMordell rank contribution from B=im(eps) = 2\nSelmer  rank contribution from B=im(eps) = 2\nSha     rank contribution from B=im(eps) = 0\nMordell rank contribution from A=ker(eps) = 0\nSelmer  rank contribution from A=ker(eps) = 0\nSha     rank contribution from A=ker(eps) = 0\n\nUsed full 2-descent via multiplication-by-2 map\nRank = 2\nRank of S^2(E)  = 2\n\nSearching for points (bound = 8)...done:\n  found points which generate a subgroup of rank 2\n  and regulator 1.6389021550386\nProcessing points found during 2-descent...done:\n  now regulator = 1.6389021550386\nSaturating (with bound = 1000)...done:\n  points were already saturated.\nTransferring points from minimal curve [0,1,0,-2333,49963] back to original curve [0,1,0,-2333,49963]\n\nGenerator 1 is [33:100:1]; height 0.55117558460006\nGenerator 2 is [49:236:1]; height 2.9949804505417\n\nRegulator = 1.6389021550386\n\nThe rank and full Mordell-Weil basis have been determined unconditionally.\n\n",
-   "stderr_tail": "ts that generate E(Q) modulo 2E(Q).\nand finally saturate to obtain generating points on the curve.\nFor more details see the mwrank documentation.\nFor details of algorithms see the author's book.\n\nPlease acknowledge use of this program in published work, \nand send problems to john.cremona@gmail.com.\n\neclib version 20261102, using NTL ZZs and NTL real and complex multiprecision floating point\nUsing multiprecision floating point with 50 bits precision.\nEnter curve:  (0.117066 seconds)\nEnter curve: "
+   "stderr_tail": "ts that generate E(Q) modulo 2E(Q).\nand finally saturate to obtain generating points on the curve.\nFor more details see the mwrank documentation.\nFor details of algorithms see the author's book.\n\nPlease acknowledge use of this program in published work, \nand send problems to john.cremona@gmail.com.\n\neclib version 20261102, using NTL ZZs and NTL real and complex multiprecision floating point\nUsing multiprecision floating point with 50 bits precision.\nEnter curve:  (0.123866 seconds)\nEnter curve: "
   },
   "rank": 2,
   "unconditional": true,
@@ -84,7 +84,7 @@
    "cmd": "gp -q -f /tmp/det-ingredients-149600_n1.gp",
    "input_sha256": "e3b0c44298fc1c14",
    "exit": 0,
-   "elapsed_s": 0.026,
+   "elapsed_s": 0.025,
    "stdout_tail": "   realprecision = 250 significant digits\nING-N = 149600\nING-w = 1\nING-dsign = -1\nING-omega1 = 0.9290546619259269392590613586174465946681671806004359404985953706529142926551976727730987941046502022576937585448889909998488389403138246450898170215285342929108524622574299265774227846129657394670932443814895082062938232540062996565096141809794574397\nING-c_2 = 2\nING-c_5 = 3\nING-c_11 = 1\nING-c_17 = 1\nING-cprod = 6\nING-tam = 6\nING-tors = 1\nING-h1 = 0.5511755846000553360625430902334478051405613937114476195346701817908510913045152731185331629977260972535526601454292369243544453757649309050414736836486502346715451555581294789598581513841336222796921106982277334221309219733454962683058807750398415523\nING-reg = 1.638902155038618907423115883595530889921539787657405103336813153643307526620897339183045589131716152829750334493935478533271044860031094563835982071539987192405231571458017202455993630804935849082796854712816475622189194894301954661033525441884874659\nING-ellrank = [2, 2, 0, [[33, 100], [49, 236]]]\nING-DONE\n",
    "stderr_tail": "  ***   Warning: new maximum stack size = 8000012288 (7629.406 Mbytes).\n  ***   syntax error, unexpected end of file, expecting )-> or ',' or ')': \n  ***   if(#gens==2,\n  ***              ^-\n... skipping file '/tmp/det-ingredients-149600_n1.gp'\n  ***   syntax error, unexpected ',', expecting end of file:\n  ***   ,print(\"ING-reg = \",h1));\n  ***   ^-------------------------\n"
   },
@@ -124,7 +124,7 @@
    "cmd": "/Library/Developer/CommandLineTools/usr/bin/python3 /Users/forge/Desktop/scatch/solvemaths1mill/scripts/lane_b_cert.py --N 149600 --an /Users/forge/Desktop/scatch/solvemaths1mill/work/an-det-149600_n1.txt --eps 1 --k 2 --digits 100 --json-out /Users/forge/Desktop/scatch/solvemaths1mill/work/det-hb-149600_n1-d100.json",
    "input_sha256": "e3b0c44298fc1c14",
    "exit": 0,
-   "elapsed_s": 27.732,
+   "elapsed_s": 28.419,
    "stdout_tail": "774621457340716475880258339756299969881432068201959083093573441698536571126247692011090888183e-118 +/- 4.44e-700], [6.23453271951099480923250822794635633837778948758276028199023960317090152209269943096732562152905865238462003132759138733934225591611661570500562242475385904247099128330229513647110017708668162789426592312228902890219744190067433360604662747194675934850174074422615793569654623001417348057901426016702552264711894320081110607770516352752152093162460986706747088099046610455020810478361963187776247685064050546284453539666962876977864280376523830643482611401621573374135897239394679022449844225378542659283524119741660243700030118567931798040916906426558301463428873752307988909111817e-118 +/- 4.44e-700]]  (n_eval=16726, prec_bits=1857)\n# L^2(1) in [[18.2715562509489262452499363375288462945847902975826962290400793751648798086837504606531633045725543020363332282306923010536158269216950388331244069230137610370950889074691432037485857938929262111155085631733846223816143279078357243785636797948256200157197549226685069909697574130334165214912169749761847383748563246124434683325223514466587091102159744981741630603468320118433795504845252163356580423802228714968928931736311875054473444860661802458849232124364990615840982395856461949581465594809753947393647599731124890157996089398825181409212916890879741132691511000605333107218953 +/- 1.30e-581], [18.2715562509489262452499363375288462945847902975826962290400793751648798086837504606531633045725543020363332282307698211373415363043612928792781244095257108004485649632044639221382664775672471428007730443275678520079870454609397230467773409047598046345472978809478272983431877833688136788973997642414700714440820592193455561708780389643754508134821222885366722197296631372278072011997496612018384623020978714968928931736311875054473444860661802458849232124364990615840982395856461949581465594809753947393647599731124890157996089398825181409212916890879741132691511000605333107218953 +/- 1.30e-581]]  (n_eval=16726, prec_bits=1857)\n",
    "stderr_tail": "# (P) pointwise law verified on a_n stream\n"
   },
@@ -134,16 +134,16 @@
   "prec_bits": 1857,
   "balls": {
    "0": [
-    "-1.75979169436055e-118",
-    "1.99714410786924e-118"
+    "-1.759791694360547482511060720872096399825613089032978390655128859567042158387473966644430111400776042190769398579758224381711230363233001877730218189440450520978e-118",
+    "1.997144107869238900622570311485884438413071098232304501684960402098605374277091921948483859018876581133796225570728597636620309894468570843022471379009042456762e-118"
    ],
    "1": [
-    "-7.07541712212058e-118",
-    "6.23453271951099e-118"
+    "-7.075417122120577580611467710552149472674838765875841749344742388437265986845121378719430930101579900367843406521418825118804732872830807562037651091254810004509e-118",
+    "6.234532719510994809232508227946356338377789487582760281990239603170901522092699430967325621529058652384620031327591387339342255916116615705005622424753859042471e-118"
    ],
    "2": [
-    "18.2715562509489",
-    "18.2715562509489"
+    "18.2715562509489262452499363375288462945847902975826962290400793751648798086837504606531633045725543020363332282306923010536158269216950388331244069230137610371",
+    "18.27155625094892624524993633752884629458479029758269622904007937516487980868375046065316330457255430203633322823076982113734153630436129287927812440952571080045"
    ]
   }
  },
@@ -153,7 +153,7 @@
    "cmd": "gp -q -f /tmp/det-ref-149600_n1.gp",
    "input_sha256": "e3b0c44298fc1c14",
    "exit": 0,
-   "elapsed_s": 0.05,
+   "elapsed_s": 0.066,
    "stdout_tail": "   realprecision = 404 significant digits (400 digits displayed)\nREF-L = 18.27155625094892624524993633752884629458479029758269622904007937516487980868375046065316330457255430203633322823073104521319163102780236482626226863744474744733206927053774041750184763742279589992281771794866272138477874030163232819092571029462007270809166038633204317108134115676095952071113927642173604837690699988426362591456077396208389788823480223567270539089585954656492023473286384515001976473\nREF-DONE\n",
    "stderr_tail": "  ***   Warning: new maximum stack size = 4000006144 (3814.703 Mbytes).\n"
   },
@@ -209,6 +209,6 @@
    "D2": "implied |Sha| contains square(s) [1] (SHA-CONSISTENT window)"
   }
  ],
- "elapsed_s": 28.0,
- "finished_utc": "2026-11-11T22:56:00.902194+00:00"
+ "elapsed_s": 28.7,
+ "finished_utc": "2026-11-11T23:35:30.301523+00:00"
 }
